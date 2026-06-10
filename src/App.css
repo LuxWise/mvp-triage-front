@@ -1,0 +1,394 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+#root {
+  width: 100%;
+}
+
+.app-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+h1 {
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+
+.subtitle {
+  margin-bottom: 24px;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.triage-form,
+.result-card,
+.error-box {
+  background: white;
+  padding: 24px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.triage-form h2,
+.result-card h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.triage-form label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.triage-form input,
+.triage-form select,
+.triage-form textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.triage-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.triage-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.triage-form button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.error-box {
+  border-left: 5px solid #dc2626;
+  color: #991b1b;
+  background: #fef2f2;
+}
+
+.form-section {
+  margin-bottom: 28px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+.form-section h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #111827;
+  font-size: 18px;
+}
+
+.section-helper {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.checkbox-item {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal !important;
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.checkbox-item input {
+  width: auto !important;
+  margin: 0;
+}
+
+.critical-option {
+  border-left: 4px solid #dc2626;
+  background: #fef2f2;
+}
+
+.triage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.triage-box {
+  background: #f8fafc;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.triage-label {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.triage-badge {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+
+.triage-1 {
+  background: #b91c1c;
+}
+
+.triage-2 {
+  background: #ea580c;
+}
+
+.triage-3 {
+  background: #d97706;
+}
+
+.triage-4 {
+  background: #2563eb;
+}
+
+.triage-5 {
+  background: #059669;
+}
+
+.decision-box,
+.adjustment-box,
+.validation-box,
+.explanation-box,
+.alerts,
+.disclaimer-box {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 10px;
+}
+
+.decision-box {
+  background: #f3f4f6;
+  border-left: 5px solid #4b5563;
+}
+
+.decision-box p {
+  margin: 6px 0;
+}
+
+.adjustment-box {
+  background: #fff7ed;
+  border-left: 5px solid #f97316;
+  color: #9a3412;
+  font-weight: bold;
+}
+
+.validation-box {
+  background: #ecfeff;
+  border-left: 5px solid #0891b2;
+  color: #155e75;
+  font-weight: bold;
+}
+
+.explanation-box {
+  background: #f9fafb;
+  border-left: 5px solid #6b7280;
+}
+
+.explanation-box p {
+  margin: 8px 0 0 0;
+}
+
+.alerts {
+  background: #fef2f2;
+  border-left: 5px solid #dc2626;
+}
+
+.alerts ul {
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.alerts li {
+  margin-bottom: 6px;
+}
+
+.disclaimer-box {
+  background: #eff6ff;
+  border-left: 5px solid #2563eb;
+  color: #1e3a8a;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .grid-2,
+  .grid-3,
+  .checkbox-group,
+  .triage-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-container {
+    padding: 20px 14px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
+
+.voice-box {
+  margin-bottom: 28px;
+  padding: 20px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+}
+
+.voice-box h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #1d4ed8;
+  font-size: 18px;
+}
+
+.voice-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.voice-btn {
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.start-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.stop-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.voice-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.recording-status {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #e5e7eb;
+  color: #374151;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.recording-status.recording {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.recording-error {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fef2f2;
+  border-left: 5px solid #dc2626;
+  color: #991b1b;
+}
+
+.audio-preview-box {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+
+.audio-player {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.audio-helper {
+  margin-top: 12px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.process-btn {
+  background: #059669;
+  color: white;
+}
+
+.transcription-box {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: #f9fafb;
+  border-left: 5px solid #2563eb;
+}
+
+.transcription-box p {
+  margin: 10px 0 0 0;
+  color: #374151;
+  line-height: 1.5;
+}
