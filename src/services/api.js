@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:10000";
+const API_URL = "https://back-mvp-triage.quarnova.com";
 
 export async function predictTriage(payload) {
   const response = await fetch(`${API_URL}/predict`, {
