@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "http://localhost:10000";
 
 export async function predictTriage(payload) {
   const response = await fetch(`${API_URL}/predict`, {
